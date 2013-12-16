@@ -8,9 +8,9 @@ Setup
 
 The library depends on the `http://php.net/curl`_ cURL is a library that lets you make HTTP requests in PHP, install it::
 
-1. Install [curl](http://curl.haxx.se/)
-2. Install [php-curl](http://php.net/curl/)
-3. Get [Composer](http://getcomposer.org/)
+1. Install `curl <http://curl.haxx.se/>`_
+2. Install `php-curl <http://php.net/curl/>`_
+3. Get `Composer <http://getcomposer.org/>`_
 4. Install dependencies with `php composer.phar install`
 
 
@@ -38,8 +38,10 @@ see the examples folder for more usage examples
 Test
 ----
 
-1. Get [phpunit] (https://github.com/sebastianbergmann/phpunit/)
-2. Run test using [phpunit] (https://github.com/sebastianbergmann/phpunit/)
+1. Get `phpunit <https://github.com/sebastianbergmann/phpunit/>`_
+
+2. Run test using `phpunit <https://github.com/sebastianbergmann/phpunit/>`_
+
 
 ::
 
