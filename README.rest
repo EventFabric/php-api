@@ -1,0 +1,51 @@
+Event Fabric API Client
+=======================
+
+PHP implementation of Event Fabric API to send events.
+
+Setup
+-----
+
+The library depends on the `http://php.net/curl`_ cURL is a library that lets you make HTTP requests in PHP, install it::
+
+1. Install [curl](http://curl.haxx.se/)
+2. Install [php-curl](http://php.net/curl/)
+3. Get [Composer](http://getcomposer.org/)
+4. Install dependencies with `php composer.phar install`
+
+
+Usage
+-----
+
+see the examples folder for more usage examples
+
+::
+
+    use \EventFabric\Client;
+    use \EventFabric\Event;
+
+    $ef_client = new Client("your_username", "your_password");
+    $loginResult = $ef_client->login();
+    $eventResult = $ef_client->send_event(new Event(
+                array(
+                    'text' => 'CPU',
+                    'percentage' => 80
+                    ), "your_channel"));
+
+    $this->assertTrue($eventResult['ok']);
+
+
+Test
+----
+
+1. Get [phpunit] (https://github.com/sebastianbergmann/phpunit/)
+2. Run test using [phpunit] (https://github.com/sebastianbergmann/phpunit/)
+
+::
+
+    phpunit
+
+License
+-------
+
+MIT
