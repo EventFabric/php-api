@@ -13,6 +13,11 @@ The library depends on the `http://php.net/curl`_ cURL is a library that lets yo
 3. Get `Composer <http://getcomposer.org/>`_
 4. Install dependencies with `php composer.phar install`
 
+::
+
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=bin
+
+    composer.phar install
 
 Usage
 -----
