@@ -12,19 +12,36 @@ namespace EventFabric;
 class Event {
     protected $value;
     protected $channel;
+    protected $bucket;
 
-    public function __construct ($value, $channel) {
+    public function __construct ($value, $channel, $bucket = null) {
         $this->value= $value;
         $this->channel= $channel;
+        $this->bucket= $bucket;
     }
 
     public function getEvent()
     {
         return array(
             'channel'=> $this->channel,
-            'value'=> $this->value
+            'value'=> $this->value,
+            'bucket'=> $this->bucket
         );
     }
+
+    public function getValue()
+    {
+        return $this->value;
+    }
+    public function getChannel()
+    {
+        return $this->channel;
+    }
+    public function getBucket()
+    {
+        return $this->bucket;
+    }
+
 }
 
 ?>

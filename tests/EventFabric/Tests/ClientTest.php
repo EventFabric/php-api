@@ -10,7 +10,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->ef_client = new Client("your_username", "your_password");
+        $this->ef_client = new Client("admin", "secret", "http://localhost:8080/");
     }
 
     public function testLogin()
@@ -22,6 +22,7 @@ class ClientTest extends PHPUnit_Framework_TestCase
             'percentage' => 80
         ), "your_channel"));
 
+        print($eventResult['ok']);
         $this->assertTrue($eventResult['ok']);
     }
 }
