@@ -86,7 +86,7 @@ class Client
         $channel = $event->getChannel();
         $bucket = $event->getBucket();
         if ($bucket == null) {
-            $bucket =  "user_" . $this->username;
+            $bucket =  "_user_" . $this->username;
         }
         $url = "streams/" . $bucket . "/" . $channel . "/";
         print($url);

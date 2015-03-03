@@ -18,9 +18,9 @@ class ClientTest extends PHPUnit_Framework_TestCase
         $loginResult = $this->ef_client->login();
         $eventResult = $this->ef_client->send_event(new Event(
             array(
-            'text' => 'CPU',
+            'text' => 'cpu',
             'percentage' => 80
-        ), "your_channel"));
+        ), "my.channel"));
 
         print($eventResult['ok']);
         $this->assertTrue($eventResult['ok']);
